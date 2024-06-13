@@ -1,0 +1,40 @@
+//Leslye Janeth Garcia Reyes
+//20212020467
+
+void main() {
+  //Objeto de la clase Circulo
+  Circulo circuloDatos = Circulo(radio: 20, color: 'Negro');
+
+  //Datos del circulo
+  print('Datos del circulo');
+  print('Radio: ${circuloDatos.radio}');
+  print('Color: ${circuloDatos.color}');
+
+  //Area del circulo
+  double area = circuloDatos.calcularArea();
+  print('Area: $area');
+
+  //Perimetro del circulo
+  double perimetro = circuloDatos.calcularPerimetro();
+  print('Perimetro: $perimetro');
+}
+
+  //Clase
+class Circulo { 
+  double radio; 
+  String color;
+
+  //Constructor 
+  Circulo({required this.radio, 
+           required this.color});
+
+  //Metodo calcular area
+  double calcularArea() {
+    return 3.14 * radio * radio;
+  }
+
+  //Metodo calcular perimetro
+  double calcularPerimetro() {
+    return  3.14 * radio *2;
+  }
+}
